@@ -1,0 +1,21 @@
+#goteam {
+    background-color: yellow;
+    color: navy;
+    text-align: center;
+    max-width: 650px;
+    min-width: 398px;
+    height: 1000px;
+    margin: 5em auto;
+    padding: 3em;
+    border-radius: 3em;
+    border-color: navy;
+    border-style: solid;
+}
+img {
+    width: 400px;
+    height: auto;
+}
+h1, h2 {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}

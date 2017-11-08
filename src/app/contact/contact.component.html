@@ -1,0 +1,25 @@
+<p>
+  I promise: No Out-of-Office or auto-replies. I will send you a real email.
+</p>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+  <input formControlName="name" placeholder="Your name">
+  <p>Your name: {{ myForm.get('name').value }}</p>
+  <div *ngIf="myForm.get('name').hasError('required')">
+    Oops, please provide a name!
+  </div>
+  <p></p><br>
+  <input formControlName="email" placeholder="Your email">
+  <div *ngIf="myForm.controls.email.hasError('pattern')">
+    Oops, wrong pattern buddy!
+  </div>
+
+
+  <input type="textarea" formControlName="message" placeholder="Your message">
+  <div *ngIf="myForm.controls.message.hasError('required')">
+    Write something longer please!
+  </div>
+
+  <button type="submit" [disabled]="myForm.invalid">
+    Send
+  </button>
+</form>
