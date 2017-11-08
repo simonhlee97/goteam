@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { routes } from './constants/routes';
+import { AccordionModule } from 'primeng/primeng';     //accordion and accordion tab
+import { MenuItem } from 'primeng/primeng';            //api
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,5 @@ import { routes } from './constants/routes';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = "Simon's fan engagement app";
+  
 }

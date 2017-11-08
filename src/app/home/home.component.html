@@ -1,0 +1,34 @@
+<div class="simon">
+<h1>Simon's Angular Apps Portfolio</h1>
+<p>
+  I created this to help me better understand the Angular 4 framework.
+</p>
+</div>
+
+<p-accordion>
+  <p-accordionTab header="Salads">
+    Salads...
+  </p-accordionTab>
+  <p-accordionTab header="Pasta">
+    Pasta...
+  </p-accordionTab>
+  <p-accordionTab header="Pizza" [selected]="true">
+    <p-radioButton label="Double cheese" name="pizza" value="double-cheese" [(ngModel)]="pizzaSelection">
+    </p-radioButton>
+    <br>
+
+    <p-radioButton label="Anchovy" name="pizza" value="anchovy" [(ngModel)]="pizzaSelection">
+    </p-radioButton>
+    <br>
+
+    <p-radioButton label="Meat lover" name="pizza" value="meat-lover" [(ngModel)]="pizzaSelection">
+    </p-radioButton>
+  </p-accordionTab>
+</p-accordion>
+
+<br>
+
+<p-panel header="Extras" *ngIf="pizzaSelection && pizzaSelection.length">
+  Would you like extra cheese on your pizza?
+  <button pButton type="button" label="Ok, yeah!"></button>
+</p-panel>
