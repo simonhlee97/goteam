@@ -27,6 +27,7 @@ import { TabMenuModule, MenuModule} from 'primeng/primeng';
 import { DataListModule } from 'primeng/primeng';
 import { InputTextModule } from 'primeng/primeng';
 import { InputTextareaModule } from 'primeng/primeng';
+import {OverlayPanelModule} from 'primeng/primeng';
 // NgPrime stuff
 
 import { ItemService } from './todoapp/services/item.service';
@@ -50,6 +51,7 @@ import { AddItemComponent } from './todoapp/add-item/add-item.component';
     ReactiveFormsModule,
     FormsModule,
     TabMenuModule,
+    OverlayPanelModule,
     AccordionModule,
     InputTextareaModule,
     DataListModule,

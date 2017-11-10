@@ -1,9 +1,19 @@
 
 <div class="ui-g">
-  <div class="ui-g-3">app brief: this app uses Angular 4, PrimeNG, Angularfire2, and Google's new Cloud Firestore</div>
-  <div class="ui-g-3">3 col</div>
+  <div class="ui-g-2"></div>
+  <div class="ui-g-2">
+    <p></p>
+    <button id="panel" type="text" pButton label="about this app" (click)="op.toggle($event)">
+    </button>
+
+    <p-overlayPanel #op [showCloseIcon]="true">
+       This app uses Angular 4, PrimeNG with Rocket theme, Angularfire2, and Google's new Cloud Firestore
+    </p-overlayPanel>
+  </div>
+
+  <div class="ui-g-2"></div>
   <div class="ui-g-6">
-    <h3>Add an item to your To Do List</h3>
+    <h3>Add an item to your Todo List</h3>
     <form (ngSubmit)="onSubmit()">
       <div class="row">
         <div>
@@ -15,7 +25,7 @@
           <textarea pInputTextarea [(ngModel)]="item.description" name="description"></textarea>
           <label>Description</label><br>
         </div>
-        <button pButton type="button" (click)="onsubmit()" label="Submit"></button>
+        <button pButton type="submit" label="Submit"></button>
         <!-- <input type="submit" value="Submit" class="btn"> -->
       </div>
     </form>

@@ -11,8 +11,8 @@
         
         <div class="ui-g-12 ui-md-9 item-details">
           <div class="ui-g">
-            <div class="ui-g-2 ui-sm-6">Todo Item: </div>
-            <div class="ui-g-10 ui-sm-6">{{item.title}}</div>
+            <div class="ui-g-2 ui-sm-6">Todo Title: </div>
+            <div (dblclick)="deleteItem($event, item)" class="ui-g-10 ui-sm-6">{{item.title}}</div>
   
             <div class="ui-g-2 ui-sm-6">Description: </div>
             <div class="ui-g-10 ui-sm-6">{{item.description}}</div>

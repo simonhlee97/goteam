@@ -22,4 +22,8 @@ export class TodoappComponent implements OnInit {
     });
   }
 
+  deleteItem(event, item){
+    this.itemService.deleteItem(item);
+  }
+
 }

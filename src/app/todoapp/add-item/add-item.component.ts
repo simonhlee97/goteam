@@ -17,7 +17,17 @@ export class AddItemComponent implements OnInit {
 
   ngOnInit() {
   }
-  onsubmit(){
-    
+
+  onSubmit(){
+    if(this.item.title != '' && this.item.description != ''){ 
+      this.itemService.addItem(this.item);
+      this.item.title = '';
+      this.item.description = '';
+    }
   }
+
+  //op.toggle($event)
+
+
+
 }
