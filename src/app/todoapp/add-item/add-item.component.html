@@ -1,0 +1,23 @@
+
+<div class="ui-g">
+  <div class="ui-g-3">app brief: this app uses Angular 4, PrimeNG, Angularfire2, and Google's new Cloud Firestore</div>
+  <div class="ui-g-3">3 col</div>
+  <div class="ui-g-6">
+    <h3>Add an item to your To Do List</h3>
+    <form (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div>
+          <input type="text" placeholder="Add Title" pInputText [(ngModel)]="item.title" name="title"/>
+          <label>Title<br></label>
+          
+        </div>
+        <div class="input-field">
+          <textarea pInputTextarea [(ngModel)]="item.description" name="description"></textarea>
+          <label>Description</label><br>
+        </div>
+        <button pButton type="button" (click)="onsubmit()" label="Submit"></button>
+        <!-- <input type="submit" value="Submit" class="btn"> -->
+      </div>
+    </form>
+  </div>
+</div>
