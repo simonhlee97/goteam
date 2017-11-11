@@ -26,8 +26,6 @@ export class AddItemComponent implements OnInit {
     }
   }
 
-  //op.toggle($event)
-
 
 
 }

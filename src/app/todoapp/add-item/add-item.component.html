@@ -3,11 +3,18 @@
   <div class="ui-g-2"></div>
   <div class="ui-g-2">
     <p></p>
-    <button id="panel" type="text" pButton label="about this app" (click)="op.toggle($event)">
-    </button>
+    <button id="panel" type="text" pButton label="about this app" (click)="op.toggle($event)"></button>
 
     <p-overlayPanel #op [showCloseIcon]="true">
-       This app uses Angular 4, PrimeNG with Rocket theme, Angularfire2, and Google's new Cloud Firestore
+       This CRUD app was built with:
+       <ul>
+         <li>Angular 4</li>
+         <li>PrimeNG with Rocket theme</li>
+        <li>Angularfire2</li>
+        <li>Google's new Cloud Firestore</li>
+        <li>last updated: 11/10/2017</li>
+        <li><a href="https://github.com/simonhlee97/goteam/">GitHub Repo</a></li>
+      </ul>
     </p-overlayPanel>
   </div>
 
@@ -18,7 +25,7 @@
       <div class="row">
         <div>
           <input type="text" placeholder="Add Title" pInputText [(ngModel)]="item.title" name="title"/>
-          <label>Title<br></label>
+          <label>Title<p></label>
           
         </div>
         <div class="input-field">
@@ -26,7 +33,6 @@
           <label>Description</label><br>
         </div>
         <button pButton type="submit" label="Submit"></button>
-        <!-- <input type="submit" value="Submit" class="btn"> -->
       </div>
     </form>
   </div>

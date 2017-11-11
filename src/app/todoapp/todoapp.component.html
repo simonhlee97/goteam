@@ -4,18 +4,36 @@
 <div *ngIf="items?.length > 0;else noItems">
   <p-dataList [value]="items" [paginator]="true" [rows]="5">
     <p-header>
-      Todo App with Firestore
+      Angular with Firestore Todo App
     </p-header>
     <ng-template let-item pTemplate="item">
       <div class="ui-g ui-fluid item-item">
         
         <div class="ui-g-12 ui-md-9 item-details">
           <div class="ui-g">
-            <div class="ui-g-2 ui-sm-6">Todo Title: </div>
-            <div (dblclick)="deleteItem($event, item)" class="ui-g-10 ui-sm-6">{{item.title}}</div>
-  
-            <div class="ui-g-2 ui-sm-6">Description: </div>
-            <div class="ui-g-10 ui-sm-6">{{item.description}}</div>
+            <div class="ui-g-2 ui-sm-6">
+              <a>
+                <i (click)="editItem($event, item)" class="fa fa-pencil"></i>
+                <i *ngIf="editState && itemToEdit.id == item.id" (click)="clearState()" class="fa fa-compress"></i>
+              </a>
+              <div *ngIf="editState && itemToEdit.id == item.id">
+                <form (ngSubmit)="updateItem(item)">
+                  <div class="row">
+                    <div>
+                      <input type="text" placeholder="Add Title" pInputText [(ngModel)]="item.title" name="title" />
+                      <textarea pInputTextarea [(ngModel)]="item.description" name="description"></textarea>
+                    </div>
+                    
+                    <button pButton type="submit" label="Update Item"></button>
+                    <button pButton (click)="deleteItem($event, item)" label="Delete Item" class="ui-button-danger"></button>
+                  </div>
+                </form>
+              </div>
+              
+            </div>
+
+            <div class="ui-g-10 ui-sm-6"><strong>{{item.title}}: </strong> {{item.description}}</div>
+            
           </div>
         </div>
       </div>
