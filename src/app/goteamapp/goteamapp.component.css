@@ -2,20 +2,23 @@
     background-color: yellow;
     color: navy;
     text-align: center;
-    max-width: 650px;
-    min-width: 398px;
-    height: 1000px;
-    margin: 5em auto;
-    padding: 3em;
+    width: 590px;
+    height: 800px;
+    margin: 4em auto;
+    padding: 2em;
     border-radius: 3em;
     border-color: navy;
     border-style: solid;
 }
 img {
-    width: 400px;
+    width: 380px;
     height: auto;
 }
 h1, h2 {
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+#shirt {
+    width: 150px;
+    height: auto;
 }

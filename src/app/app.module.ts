@@ -16,6 +16,8 @@ import { TodoappComponent } from './todoapp/todoapp.component';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+import { AddItemComponent } from './todoapp/add-item/add-item.component';
+import { PlayComponent } from './goteamapp/play/play.component';
 // my Components
 
 // NgPrime stuff
@@ -27,11 +29,16 @@ import { TabMenuModule, MenuModule} from 'primeng/primeng';
 import { DataListModule } from 'primeng/primeng';
 import { InputTextModule } from 'primeng/primeng';
 import { InputTextareaModule } from 'primeng/primeng';
-import {OverlayPanelModule} from 'primeng/primeng';
+import { OverlayPanelModule } from 'primeng/primeng';
+import { FieldsetModule } from 'primeng/primeng';
+import { TabViewModule } from 'primeng/primeng';
+import { DataGridModule } from 'primeng/primeng';
+import { MessagesModule } from 'primeng/primeng';
+import { MessageModule } from 'primeng/primeng';
 // NgPrime stuff
 
 import { ItemService } from './todoapp/services/item.service';
-import { AddItemComponent } from './todoapp/add-item/add-item.component';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +48,8 @@ import { AddItemComponent } from './todoapp/add-item/add-item.component';
     GoteamappComponent,
     TodoappComponent,
     ContactComponent,
-    AddItemComponent
+    AddItemComponent,
+    PlayComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +59,9 @@ import { AddItemComponent } from './todoapp/add-item/add-item.component';
     ReactiveFormsModule,
     FormsModule,
     TabMenuModule,
+    TabViewModule,
+    DataGridModule,
+    FieldsetModule,
     OverlayPanelModule,
     AccordionModule,
     InputTextareaModule,
@@ -59,13 +70,17 @@ import { AddItemComponent } from './todoapp/add-item/add-item.component';
     PanelModule,
     MenuModule,
     ButtonModule,
+    MessageModule,
+    MessagesModule,
     RadioButtonModule,
     RouterModule.forRoot([
       { path: 'home', component: HomeComponent },
       { path: '', component: HomeComponent },
       { path: 'goteamapp', component: GoteamappComponent },
+      { path: 'play', component: PlayComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'todoapp', component: TodoappComponent }
+
       // { path: 'profile/:username', component: ProfileComponent } for parameters
       // { path: '**', component: NotFoundComponent } wild-card catches all other routes and goes to NotFound
     ])

@@ -1,39 +1,20 @@
+<div id="add" class="ui-g">
+  <div class="ui-g-4"></div>
 
-<div class="ui-g">
-  <div class="ui-g-2"></div>
-  <div class="ui-g-2">
-    <p></p>
-    <button id="panel" type="text" pButton label="about this app" (click)="op.toggle($event)"></button>
-
-    <p-overlayPanel #op [showCloseIcon]="true">
-       This CRUD app was built with:
-       <ul>
-         <li>Angular 4</li>
-         <li>PrimeNG with Rocket theme</li>
-        <li>Angularfire2</li>
-        <li>Google's new Cloud Firestore</li>
-        <li>last updated: 11/10/2017</li>
-        <li><a href="https://github.com/simonhlee97/goteam/">GitHub Repo</a></li>
-      </ul>
-    </p-overlayPanel>
-  </div>
-
-  <div class="ui-g-2"></div>
-  <div class="ui-g-6">
-    <h3>Add an item to your Todo List</h3>
+  <div class="ui-g-4">
+    <h3>Add an item</h3>
     <form (ngSubmit)="onSubmit()">
-      <div class="row">
+      <div>
         <div>
-          <input type="text" placeholder="Add Title" pInputText [(ngModel)]="item.title" name="title"/>
-          <label>Title<p></label>
-          
+          <input type="text" placeholder="Add Title" pInputText [(ngModel)]="item.title" name="title" />
         </div>
         <div class="input-field">
-          <textarea pInputTextarea [(ngModel)]="item.description" name="description"></textarea>
-          <label>Description</label><br>
+          <textarea pInputTextarea [(ngModel)]="item.description" name="description" placeholder="Add Description"></textarea>
         </div>
         <button pButton type="submit" label="Submit"></button>
       </div>
     </form>
   </div>
+  
+  <div class="ui-g-4"></div>
 </div>

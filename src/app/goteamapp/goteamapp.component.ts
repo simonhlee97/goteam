@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ButtonModule } from 'primeng/primeng';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'goteamapp',
@@ -8,7 +9,7 @@ import { ButtonModule } from 'primeng/primeng';
 })
 export class GoteamappComponent implements OnInit {
 
-  question = 'Which team will hit the first 3-pointer of tonight\'s game?';
+  
   prize = 'Pacers t-shirt';
   
   constructor() { }
