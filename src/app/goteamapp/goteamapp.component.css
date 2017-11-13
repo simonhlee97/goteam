@@ -1,4 +1,4 @@
-#goteam {
+div {
     background-color: yellow;
     color: navy;
     text-align: center;
@@ -18,19 +18,31 @@ h1, h2 {
     margin-top: 1em;
     margin-bottom: 1em;
 }
+h4{
+    text-align: center;
+    color: navy;
+    margin-left: 3em;
+    margin-right: 3em;
+}
 #shirt {
     width: 150px;
     height: auto;
 }
-
-#game {
-    display: none;
+#submitbtn {
+    margin-top: 4em;
 }
+#question{
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+/* #play {
+    display: none;
+} */
 p {
     width:200px;
     background:lightgray;
-    margin: 100px auto;
+    margin: 60px auto;
     text-align:center;
-    padding:20px;
-    font-size:1.5em;
+    padding:15px;
+    font-size:1.2em;
   }

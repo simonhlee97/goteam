@@ -1,6 +1,6 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -35,10 +35,11 @@ import { TabViewModule } from 'primeng/primeng';
 import { DataGridModule } from 'primeng/primeng';
 import { MessagesModule } from 'primeng/primeng';
 import { MessageModule } from 'primeng/primeng';
+import { DropdownModule } from 'primeng/primeng';
+import { SelectButtonModule } from 'primeng/primeng';
 // NgPrime stuff
 
 import { ItemService } from './todoapp/services/item.service';
-
 
 @NgModule({
   declarations: [
@@ -62,8 +63,10 @@ import { ItemService } from './todoapp/services/item.service';
     TabViewModule,
     DataGridModule,
     FieldsetModule,
+    DropdownModule,
     OverlayPanelModule,
     AccordionModule,
+    SelectButtonModule,
     InputTextareaModule,
     DataListModule,
     InputTextModule,

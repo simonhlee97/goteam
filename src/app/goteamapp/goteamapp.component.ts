@@ -1,37 +1,61 @@
 import { Component, OnInit } from '@angular/core';
-import { ButtonModule } from 'primeng/primeng';
 import { RouterLink } from '@angular/router';
+import { fade } from './../animations';
+import { SelectItem } from 'primeng/primeng';
+import { DropdownModule } from 'primeng/primeng';
 import {trigger,state,style,transition,animate,keyframes} from '@angular/animations';
 
+interface Ticket {
+  name: string,
+  code: string
+}
 
 @Component({
   selector: 'goteamapp',
   templateUrl: './goteamapp.component.html',
   styleUrls: ['./goteamapp.component.css'],
   animations: [
-    trigger('myAwesomeAnimation', [
-      state('small', style({
-        transform: 'scale(1)'
-      })),
-      state('large', style({
-        transform: 'scale(1.2)'
-      })),
-      transition('small <=> large', animate('300ms ease-in', keyframes([
-        style({ opacity: 0, transform: 'translateY(-75%)', offset: 0 }),
-        style({ opacity: 1, transform: 'translateY(35px)', offset: 0.5 }),
-        style({ opacity: 1, transform: 'translateY(0)', offset: 1.0 })
-      ])))
-    ])
-  ]
+    fade
+    // trigger('fade', [
+    //   transition('void => *', [
+    //     style({opacity: 0}),
+    //     animate(2000)  // style({backgroundColor: 'white', opacity: 1}))  can clean up code because Default state is opacity=1 and bgColor is white
+    //   ]),
+    //   transition('* => void', [
+    //     animate(2000, style({opacity: 0}))
+    //   ])
+    ]
 })
 export class GoteamappComponent implements OnInit {
 
-  state: string = 'small';
+  types: SelectItem[];
+  selectedType: string;
+
+
+  seat: Ticket[];
+  selection: Ticket;
+
+
+  question = 'Which team will make the first 3-pointer in the 4th quarter?';
   prize = 'Pacers t-shirt';
-  animateMe() {
-    this.state = (this.state === 'small' ? 'large' : 'small');
-  }
-  constructor() { }
+  // animateMe() {
+  //   this.state = (this.state === 'one' ? 'two' : 'one');
+  // }
+  constructor() { 
+    this.seat = [
+      { name: '101', code: '101' },
+      { name: '102', code: '102' },
+      { name: '103', code: '103' },
+      { name: '104', code: '104' },
+      { name: '105', code: '105' },
+      { name: '106', code: '106' },
+      { name: '107', code: '107' },
+      { name: '108', code: '108' }
+    ],
+    this.types = [];
+    this.types.push({ label: 'Pacers', value: 'Pacers' });
+    this.types.push({ label: 'Celtics', value: 'Celtics' });
+   }
 
   ngOnInit() {
     
