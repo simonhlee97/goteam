@@ -19,7 +19,6 @@ h1, h2 {
     margin-bottom: 1em;
 }
 h4{
-    text-align: center;
     color: navy;
     margin-left: 3em;
     margin-right: 3em;
@@ -29,15 +28,12 @@ h4{
     height: auto;
 }
 #submitbtn {
-    margin-top: 4em;
+    margin-top: 3em;
 }
 #question{
-    margin-top: 4em;
-    margin-bottom: 4em;
+    margin-top: 2.5em;
+    margin-bottom: 2em;
 }
-/* #play {
-    display: none;
-} */
 p {
     width:200px;
     background:lightgray;

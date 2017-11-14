@@ -1,17 +1,17 @@
-<h4>This is just a prototype I made for a fan-engagment tool that the Pacers could use. Could this help prevent crowds from leaving the game early when the Pacers are getting blown out? Could be a fun business experiment.</h4>
+<h4>A prototype I made for a fan-engagment app that the Pacers could use. Could this help prevent crowds from leaving the game early when the Pacers are getting blown out? Could be a fun business experiment.</h4>
 
-<div id="goteam" @fade>  
+<div id="goteam" *ngIf="showHide">  
   <h1>Welcome to Banker's Life Fieldhouse</h1>
   <img src="../assets/banklife.jpg" alt="bankers life fieldhouse">
   <h1>Home of the Indiana Pacers</h1>
   <h2>Answer the question correctly and you'll be entered into a drawing for a {{prize}}!</h2>
   <img id="shirt" src="../assets/shirt.jpeg">
   <h2>You can only submit once. To be eligible for the prize, answers must be submitted before start of 4th Quarter.</h2>
-  <button pButton type="button" ng-click="animate()" class="ui-button-info" label="PLAY"></button>
+  <button pButton type="button" (click)="switchdiv()" class="ui-button-primary" label="PLAY"></button>
 </div>
 
 
-<div id="play" @fade>
+<div id="play" *ngIf="!showHide">
   
   <h1>Where are you sitting?</h1>
   
@@ -27,9 +27,11 @@
   
   <h3 id="question" class="first">{{question}}</h3>
   
-  <p-selectButton [options]="types" [(ngModel)]="selectedType"></p-selectButton>
+  <p-selectButton [options]="teams" [(ngModel)]="selectedType"></p-selectButton>
 
-  <br><br>
-  <button id="submitbtn" pButton type="button" class="ui-button-success" label="Submit"></button>
+  <br>
+  <h3 id="countdown">Time Remaining: </h3>
+  <h2>5: 04</h2>
+  <button id="submitbtn" pButton type="button" class="ui-button-primary" (click)="switchdiv()" label="Submit"></button>
   
 </div>
