@@ -78,7 +78,6 @@ import { ItemService } from './todoapp/services/item.service';
       { path: 'home', component: HomeComponent },
       { path: '', component: HomeComponent },
       { path: 'goteamapp', component: GoteamappComponent },
-      { path: 'play', component: PlayComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'todoapp', component: TodoappComponent }
 
