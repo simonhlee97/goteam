@@ -17,7 +17,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { AddItemComponent } from './todoapp/add-item/add-item.component';
-import { PlayComponent } from './goteamapp/play/play.component';
 // my Components
 
 // NgPrime stuff
@@ -49,8 +48,7 @@ import { ItemService } from './todoapp/services/item.service';
     GoteamappComponent,
     TodoappComponent,
     ContactComponent,
-    AddItemComponent,
-    PlayComponent
+    AddItemComponent
   ],
   imports: [
     BrowserModule,
